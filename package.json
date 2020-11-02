@@ -4,12 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start":"nodemon app.js",
-    "db:create":"createdb --echo cluckr_db",
-    "db:drop":"dropdb --if-exists --echo cluckr_db ",
-    "db:migrate":"knex migrate:latest",
-    "db:rollback":"knex migrate:rollback",
-    "db:reset":"npm run db:drop && npm run db:create && npm run db:migrate"
+    "start": "nodemon app.js",
+    "db:create": "createdb --echo cluckr_db",
+    "db:drop": "dropdb --if-exists --echo cluckr_db ",
+    "db:migrate": "knex migrate:latest",
+    "db:rollback": "knex migrate:rollback",
+    "db:reset": "npm run db:drop && npm run db:create && npm run db:migrate"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +22,7 @@
     "pg": "^8.4.2"
   },
   "devDependencies": {
+    "faker": "^5.1.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.6"
   }
