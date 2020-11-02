@@ -19,8 +19,15 @@ app.use(methodOverride((request,response) => {
         return method;
     }
 }));
+app.use((req,res,next) => {
+    const username =req.cookies.username;
+   res.locals.signedInUser = username || "";
+    next();
+})
 
 
+const baseRouter = require("./routes/baseRouter");
+app.use('/',baseRouter);
 
 
  const PORT = 3000;
