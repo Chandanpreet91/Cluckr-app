@@ -4,7 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"nodemon app.js",
+    "db:create":"createdb --echo cluckr_db",
+    "db:drop":"dropdb --if-exists --echo cluckr_db ",
+    "db:migrate":"knex migrate:latest",
+    "db:rollback":"knex migrate:rollback",
+    "db:reset":"npm run db:drop && npm run db:create && npm run db:migrate"
   },
   "author": "",
   "license": "ISC",
