@@ -17,6 +17,7 @@ router.post("/",(req,res)=>{
 })
 
 
+
 router.post("/clucks",(req,res)=> {
     knex("clucks")
     .orderBy("createdAt")
