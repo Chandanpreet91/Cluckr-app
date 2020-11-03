@@ -1,0 +1,24 @@
+<%- include('../partials/header')%>
+<%if(signedInUser){%>
+<div class='post-cards'>
+    <% for (let element of clucks) {%>
+        <div class="card mb-4">
+            <div class="card-body">
+                <a href="/posts/<%= element.id%>">
+                <h5 class='card-title'><%= element.username %></h5>
+                </a>
+                <img class="small-image" src="<%= element.imageUrl %>">
+                <p class="card-text"><%= element.content%></p>
+
+            </div>
+
+        </div>
+    
+        <% } %> 
+</div>
+<% } else { %> 
+    <h1>User not signed In</h1>
+<% } %> 
+
+<%- include('../partials/footer')%>
+
