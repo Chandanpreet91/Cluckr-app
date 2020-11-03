@@ -24,12 +24,14 @@ app.use((req,res,next) => {
    res.locals.signedInUser = username || "";
     next();
 })
+app.use(express.static(path.join(__dirname,"public")))
 
 
 const baseRouter = require("./routes/baseRouter");
 app.use('/',baseRouter);
 
-
+const clucksRouter = require("./routes/clucksRouter");
+app.use("/",clucksRouter);
  const PORT = 3000;
  const ADDRESS  = 'localhost';
  app.listen(PORT,ADDRESS,()=> {

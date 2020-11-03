@@ -1,0 +1,11 @@
+<%- include('../partials/header')%>
+<h1>New Cluck</h1>
+
+<form action="/clucks" method="POST">
+<div class="form-group">
+    <input type="text" class="form-control" name="title" placeholder="e.g. Madam Welminster"/>
+    </div>
+   <input type="submit" class="btn btn-outline-success" value="Sign In"/> 
+</form>
+
+<%- include('./partials/footer') %>

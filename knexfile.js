@@ -5,7 +5,7 @@ module.exports = {
   development: {
     client: 'pg',
     connection: {
-      filename: 'cluckr_db',
+      database: 'cluckr_db',
       username:"oem",
       password:"Jatin@123"
     },
